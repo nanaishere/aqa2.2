@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class WebTest {
+public class CardDeliveryTest {
 
     LocalDate localDate = LocalDate.now().plusDays(4);
     DateTimeFormatter data = DateTimeFormatter.ofPattern("dd.MM.yyyy");
@@ -27,8 +27,8 @@ public class WebTest {
         $("[data-test-id='city'] input").val("Тверь");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
         $("[data-test-id='date'] input").val(strData);
-        $("[data-test-id='name'] input").val("Лысак Виталий Леонидович");
-        $("[data-test-id='phone'] input").val("+79157481592");
+        $("[data-test-id='name'] input").val("Одношевина Анастасия Александровна");
+        $("[data-test-id='phone'] input").val("+79030854340");
         $("[data-test-id='agreement']").click();
         $(withText("Забронировать")).click();
         $("[class='notification__content']")
